@@ -1,0 +1,9 @@
+extend type Query {
+  Message(id: ID!): Message
+}
+
+extend type Mutation {
+  createMessage(input: CreateMessageInput!): Message!
+  updateMessage(id: ID!, input: UpdateMessageInput!): Message!
+  deleteMessage(id: ID!): Message!
+}

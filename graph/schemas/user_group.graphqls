@@ -1,0 +1,9 @@
+extend type Query {
+  UserGroup(id: ID!): UserGroup
+}
+
+extend type Mutation {
+  createUserGroup(input: CreateUserGroupInput!): UserGroup!
+  updateUserGroup(id: ID!, input: UpdateUserGroupInput!): UserGroup!
+  deleteUserGroup(id: ID!): UserGroup!
+}
