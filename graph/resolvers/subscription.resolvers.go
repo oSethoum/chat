@@ -29,7 +29,7 @@ func (r *subscriptionResolver) MessageByGroup(ctx context.Context, groupdID int)
 	go func() {
 		<-ctx.Done()
 		r.ChatObserversMutext.Lock()
-		r.ChatObservers[socketClient] = &cm
+		delete(r.ChatObservers, socketClient)
 		r.ChatObserversMutext.Unlock()
 	}()
 
